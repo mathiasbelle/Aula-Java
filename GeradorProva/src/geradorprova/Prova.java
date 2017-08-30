@@ -43,7 +43,7 @@ public class Prova {
          
          
          for (int i = 0; i < this.listaQuestoes.size(); i++) {
-             provaImpressao+="Questão "+(i+1)+") "+this.listaQuestoes.get(i).retornaQuestao();
+             provaImpressao+="Questão "+(i+1)+") "+this.listaQuestoes.get(i).retornaQuestao()+"\n";
          }
 
          return provaImpressao;
