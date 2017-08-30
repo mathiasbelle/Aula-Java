@@ -1,0 +1,19 @@
+Nome da Disciplina: Arquitetura 2
+Peso da Prova: 12
+Local da Prova: B11
+Data da Prova: 12/12/12
+
+	====Perguntas Discursivas=====
+
+01) Paulo?
+Critério de Correção: Sem pacial
+
+
+	====Perguntas Objetivas====
+1) Linux vs WIndows
+Alternativas:
+a) 1
+b) 1
+c) 1
+d) 1
+e) 1
