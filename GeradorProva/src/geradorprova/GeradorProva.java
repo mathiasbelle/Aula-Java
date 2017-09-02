@@ -30,7 +30,7 @@ import java.util.ArrayList;
             p.setData(s.nextLine());
             System.out.print("Entre com a sala da prova: ");
             p.setLocal(s.nextLine());
-            System.out.print("Entre com o peso da prova: ");
+            System.out.print("Entre com o peso da prova, número: ");
             p.setPeso(s.nextInt());
             s.nextLine();
             
