@@ -5,8 +5,6 @@
  */
 package javacalculadora;
 
-//import java.util.List;
-//import java.util.ArrayList;
 import java.util.Random;
 
 import javafx.application.Application;
@@ -91,10 +89,10 @@ public class JavaCalculadora extends Application{
         tempoLabel.setFont(Font.font("Arial", 50));
         
         
-       // montanteLabel.setFont(new Font("Pieces of Eight Alt.tff", 50));
+       
         
         janelaPrincipal.setSpacing(10);
-        //janelaPrincipal.setStyle("-fx-background-color: #babaca;");
+       
         
         TextField capital = new TextField();
         capital.setFont(Font.font("Arial", 25));
@@ -117,9 +115,6 @@ public class JavaCalculadora extends Application{
         calcJuros.setFont(Font.font("BankGothic Lt Bt", 80));
         
         
-        //Image fotos[] =new Image[2];
-        //fotos[0].getClass().getResourceAsStream("golfinho.jpg");
-        //List<Image> listaImagens = new ArrayList<>();
         
         
         /* BOTÃO DE IMAGENS ALEARÓTIAS
@@ -142,10 +137,12 @@ public class JavaCalculadora extends Application{
                 
                 Stage aleatorio = new Stage();
                 VBox random = new VBox();
-                Image imagem = new Image(getClass().getResourceAsStream((rand.nextInt(5)+1)+".jpg"));
+                //Image imagem = new Image(getClass().getResourceAsStream((rand.nextInt(5)+1)+".jpg"));
                 
-                Label foto = new Label("", new ImageView(imagem));
-                random.getChildren().add(foto);
+                //Label foto = new Label("", new ImageView(imagem));
+                
+                ImageView imagem = new ImageView(new Image(getClass().getResourceAsStream((rand.nextInt(5)+1)+".jpg")));
+                random.getChildren().add(imagem);
                //random.getChildren().add(scroll);
                 
                 ScrollPane scroll = new ScrollPane(random);
@@ -185,22 +182,19 @@ public class JavaCalculadora extends Application{
                     Stage stageErro = new Stage();
                     BorderPane mensagemErro = new BorderPane();  
                     
-                    Label colocaDouble = new Label("Erro!!\nNão é um número. Por favor, insira um número\n.Atenciosamente, o Programador");
+                    Label colocaDouble = new Label("\tErro!!\n\tNão é um número. Por favor, insira um número.\n\t\tAtenciosamente, o Programador");
                     colocaDouble.setFont(Font.font("ALGERIAN", 20));
+                    colocaDouble.setStyle("-fx-text-fill: blue; ");
                     
                     
                     VBox terrorElizandro = new VBox();
                     Label endereco = new Label("Muda o endereço de memória vacilão!");
-                    Image fotoErro = new Image(getClass().getResourceAsStream("ballottin.jpg"));
-                    ImageView a = new ImageView(fotoErro);
+                    //Image fotoErro = new Image(getClass().getResourceAsStream("ballottin.jpg"));
+                    ImageView a = new ImageView(new Image(getClass().getResourceAsStream("ballottin.jpg")));
                     terrorElizandro.getChildren().addAll(endereco, a);
                     
                     //Image erroFoto = new Image(getClass().getResourceAsStream("wrong.png"));
                     ImageView mostarFoto = new ImageView(new Image(getClass().getResourceAsStream("wrong.png")));
-                    
-                    
-                    
-                    
                     
                     
                     
@@ -209,7 +203,8 @@ public class JavaCalculadora extends Application{
                     mensagemErro.setTop(colocaDouble);
                     
                     
-                    Scene cenaErro = new Scene(mensagemErro, 800, 600);
+                    
+                    Scene cenaErro = new Scene(mensagemErro, 800, 700);
                     stageErro.setScene(cenaErro);
                     stageErro.setTitle("Erro!");
                     stageErro.show();
