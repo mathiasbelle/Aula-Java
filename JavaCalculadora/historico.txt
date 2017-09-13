@@ -1,0 +1,182 @@
+=========================
+Capital = 2
+Taxa = 2
+Tempo = 2
+Montante = 2
+Resultado = 8.0
+=========================
+=========================
+Capital = 24
+Taxa = 26
+Tempo = 27
+Montante = 25
+Resultado = 16848.0
+=========================
+=========================
+Capital = ee
+Taxa = e
+Tempo = e
+Montante = ee
+Resultado = 
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = ee
+Taxa = e
+Tempo = e
+Montante = e
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 22e1000
+Taxa = 1
+Tempo = 1
+Montante = 1
+Resultado = Infinity
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
+=========================
+Capital = 
+Taxa = 
+Tempo = 
+Montante = 
+Resultado = ERRO
+=========================
