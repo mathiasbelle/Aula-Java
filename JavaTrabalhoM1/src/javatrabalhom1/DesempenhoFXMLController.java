@@ -47,42 +47,33 @@ public class DesempenhoFXMLController extends InterfaceUsuario {
         xAxis.setLabel("Disciplina");
         yAxis.setLabel("Minha Nota");
         
-        BarChart d;
-        d = new BarChart<>(xAxis, yAxis);
+       
         
         XYChart.Series m1 = new XYChart.Series();
         m1.setName("M1");       
-        m1.getData().add(new XYChart.Data("Algorítmos 1", 10.00));
-        m1.getData().add(new XYChart.Data("Introdução a Engenharia de Computação", 10.00));
-        m1.getData().add(new XYChart.Data("Matéria do Luca", 10.00));
-        m1.getData().add(new XYChart.Data("Henri 'Terror dos Calouros' Stuker", 4.00));
-        m1.getData().add(new XYChart.Data("Célia S2", 10.00));      
+        m1.getData().add(new XYChart.Data("1", 10.00));
+        m1.getData().add(new XYChart.Data("2", 10.00));
+        m1.getData().add(new XYChart.Data("3", 10.00));
+        m1.getData().add(new XYChart.Data("4", 4.00));
+        m1.getData().add(new XYChart.Data("5", 10.00));      
         
         XYChart.Series m2 = new XYChart.Series();
         m2.setName("M2");
-        m2.getData().add(new XYChart.Data("Algorítmos 1", 10.00));
-        m2.getData().add(new XYChart.Data("Introdução a Engenharia de Computação", 10.00));
-        m2.getData().add(new XYChart.Data("Matéria do Luca", 6.00));
-        m2.getData().add(new XYChart.Data("Henri 'Terror dos Calouros' Stuker", 4.00));
-        m2.getData().add(new XYChart.Data("Célia S2", 10.00));  
+        m2.getData().add(new XYChart.Data("1", 10.00));
+        m2.getData().add(new XYChart.Data("2", 10.00));
+        m2.getData().add(new XYChart.Data("3", 6.00));
+        m2.getData().add(new XYChart.Data("4", 4.00));
+        m2.getData().add(new XYChart.Data("5", 10.00));  
         
         XYChart.Series m3 = new XYChart.Series();
         m3.setName("M3");
-        m3.getData().add(new XYChart.Data("Algorítmos 1", 10.00));
-        m3.getData().add(new XYChart.Data("Introdução a Engenharia de Computação", 10.00));
-        m3.getData().add(new XYChart.Data("Matéria do Luca", 0.00));
-        m3.getData().add(new XYChart.Data("Henri 'Terror dos Calouros' Stuker", 10.00));
-        m3.getData().add(new XYChart.Data("Célia S2", 10.00));  
+        m3.getData().add(new XYChart.Data("1", 10.00));
+        m3.getData().add(new XYChart.Data("2", 10.00));
+        m3.getData().add(new XYChart.Data("3", 0.00));
+        m3.getData().add(new XYChart.Data("4", 10.00));
+        m3.getData().add(new XYChart.Data("5", 10.00));  
         
-        d.getData().addAll(m1,m2,m3);
-        grafico = d;
-        Stage novo = new Stage();
-        
-        Scene cena = new Scene(d);
-        novo.setScene(cena);
-        novo.show();
-        labelAs.setText("Fez");
-        System.out.println("Fez");
+        grafico.getData().addAll(m1,m2,m3);
         
     } 
     

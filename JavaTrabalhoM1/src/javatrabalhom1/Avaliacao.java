@@ -5,7 +5,13 @@
  */
 package javatrabalhom1;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -16,7 +22,7 @@ public class Avaliacao {
     private String nome;
     private String disciplina;
     private double peso;
-    private char[] media = new char[2];
+    private String media;
     private double nota;
     private int identificadorArquivo;
 
@@ -65,14 +71,14 @@ public class Avaliacao {
     /**
      * @return the media
      */
-    public char[] getMedia() {
+    public String getMedia() {
         return media;
     }
 
     /**
      * @param media the media to set
      */
-    public void setMedia(char[] media) {
+    public void setMedia(String media) {
         this.media = media;
     }
 
@@ -110,12 +116,86 @@ public class Avaliacao {
         
     }
     
-    public void atualizar(){
+//        private String nome;
+//    private String disciplina;
+//    private double peso;
+//    private char[] media = new char[2];
+//    private double nota;
+//    private int identificadorArquivo;
+    
+
+    
+    public void atualizar(){         
+        try{
+                
+                    
+                    File aqrv=new File("teste.csv");
+                    FileWriter out=new FileWriter(aqrv);
+                    //BufferedWriter bw = new BufferedWriter(out, true);
+                    out.write(this.disciplina+", "+this.media+", "+this.nome+", "+this.peso+", "+this.nota+"\n");
+                   
+                    
+                    out.close();
+	  	}catch(Exception ec){}
         
     }
     
-    public static ArrayList<Avaliacao> obterListaAvaliacao(){
-        return null;
+    public ArrayList<Avaliacao> obterListaAvaliacao(){
+        
+           //ObservableList<Avaliacao> listaAvl = null;
+        Avaliacao aval = new Avaliacao();
+        
+        
+        String stringTabela;
+        BufferedReader br = null;
+        FileReader fr = null;
+        
+
+        ArrayList<String> a1 = new ArrayList<>();
+        ArrayList<Avaliacao> a2 = new ArrayList<>();
+        
+        try {
+            fr = new FileReader("teste.csv");
+            br = new BufferedReader(fr);
+            
+            while((stringTabela = br.readLine()) != null){
+                a1.add(stringTabela);
+            }
+            Avaliacao avl;
+            for (int i = 0; i < a1.size(); i++) {
+                
+                String[] cortar = a1.get(i).split(",");
+                
+                avl = new Avaliacao();
+                System.out.println("Cortar disc: "+cortar[0]);
+                avl.setDisciplina(cortar[0]);
+                avl.setMedia(cortar[1]);
+                avl.setNome(cortar[2]);
+                avl.setPeso(Double.parseDouble(cortar[3]));
+                avl.setNota(0.0);
+                
+                a2.add(avl);
+            }
+            
+            
+
+        } catch (IOException e) {
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+
+                if (fr != null) {
+                    fr.close();
+                }
+
+            } catch (IOException ex) {
+            }
+
+        } // FIM DO ARQUIVO
+        
+        return a2;
         
         
     }

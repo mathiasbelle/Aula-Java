@@ -72,7 +72,6 @@ public class AdicionarAvlFXMLController extends InterfaceUsuario {
                 "INICIAÇÃO TÉCNICO-CIENTÍFICA",
                 "INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO",
                 "INTRODUÇÃO À FÍSICA",
-                "NAVA VIADO1",
                "CÁLCULO 1",
                 "ALGORITMOS E PROGRAMAÇÃO 2",
                 "CIRCUITOS DIGITAIS",
