@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightcyan;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightcyan;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="198.0" layoutY="46.0" mnemonicParsing="false" onAction="#IrMinhasAvaliacoes" prefHeight="25.0" prefWidth="119.0" text="Minhas Avaliações" />
-      <Button layoutX="198.0" layoutY="106.0" mnemonicParsing="false" onAction="#IrDesempenho" prefHeight="25.0" prefWidth="119.0" text="Meu Desempenho" />
+      <Button layoutX="198.0" layoutY="46.0" mnemonicParsing="false" onAction="#IrMinhasAvaliacoes" prefHeight="26.0" prefWidth="199.0" text="Minhas Avaliações" />
+      <Button layoutX="198.0" layoutY="106.0" mnemonicParsing="false" onAction="#IrDesempenho" prefHeight="26.0" prefWidth="199.0" text="Meu Desempenho" />
       <Label layoutY="-2.0" prefHeight="25.0" prefWidth="600.0" text="Dashboard" textAlignment="CENTER" textFill="#453c3c">
          <font>
             <Font size="18.0" />

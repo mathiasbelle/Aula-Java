@@ -23,6 +23,7 @@ public class JavaTrabalhoM1 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        primaryStage.setTitle("Eu queria mt coisa");
         DashboardFXMLController janelaPrincipal = new DashboardFXMLController();
         GerenciadorJanela.obterInstancia().inicializaPalco(primaryStage, janelaPrincipal);
     }

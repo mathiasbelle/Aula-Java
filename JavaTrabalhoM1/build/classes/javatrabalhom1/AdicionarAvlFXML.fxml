@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="73.0" layoutY="46.0" text="Nome" />
-      <TextField layoutX="73.0" layoutY="63.0" />
+      <TextField fx:id="NomeDisc" layoutX="73.0" layoutY="63.0" />
       <Label layoutX="76.0" layoutY="101.0" text="Peso" />
-      <TextField layoutX="73.0" layoutY="118.0" />
+      <TextField fx:id="pesoDisc" layoutX="73.0" layoutY="118.0" />
       <Label layoutX="77.0" layoutY="154.0" text="Disciplina" />
       <Button layoutX="51.0" layoutY="339.0" mnemonicParsing="false" onAction="#VoltarMinhasAvaliacoes" text="Voltar" />
       <Button layoutX="486.0" layoutY="339.0" mnemonicParsing="false" onAction="#SalvarAvaliacao" text="Salvar" />
+      <ComboBox fx:id="caixaDisc" layoutX="73.0" layoutY="187.0" prefHeight="26.0" prefWidth="365.0" promptText="Seleciona a Disciplina" />
+      <ComboBox fx:id="caixaMedias" layoutX="65.0" layoutY="246.0" prefHeight="26.0" prefWidth="220.0" promptText="Selecione a Media" />
    </children>
 </AnchorPane>
