@@ -5,6 +5,7 @@
  */
 package javatrabalhom1;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -55,7 +56,7 @@ public class InformarNotaFXMLController extends InterfaceUsuario {
         
     }    
     
-    public void SalvarNota(ActionEvent evento){
+    public void SalvarNota(ActionEvent evento) throws IOException{
         // salvar
         
         int i = MinhasAvaliacoesFXMLController.index;
@@ -64,10 +65,10 @@ public class InformarNotaFXMLController extends InterfaceUsuario {
    
         lista.get(i).setNota(Double.parseDouble(campoNota.getText()));
         System.out.println("Nota: "+lista.get(i).getNota());
+        lista.get(i).atualizar();
         
-        for (int j = 0; j < lista.size(); j++) {
-            lista.get(j).atualizar();
-        }
+        
+        
         
         
         

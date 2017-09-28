@@ -10,7 +10,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.List;
 import javafx.collections.ObservableList;
 
 /**
@@ -125,18 +128,12 @@ public class Avaliacao {
     
 
     
-    public void atualizar(){         
-        try{
-                
-                    
-                    File aqrv=new File("teste.csv");
-                    FileWriter out=new FileWriter(aqrv);
-                    //BufferedWriter bw = new BufferedWriter(out, true);
-                    out.write(this.disciplina+", "+this.media+", "+this.nome+", "+this.peso+", "+this.nota+"\n");
-                   
-                    
-                    out.close();
-	  	}catch(Exception ec){}
+    public void atualizar() throws IOException{         
+        File f = new File("teste.csv");
+        List<String> lines = Files.readAllLines(f.toPath());
+        lines.remove(MinhasAvaliacoesFXMLController.index);
+        lines.add(MinhasAvaliacoesFXMLController.index, this.disciplina + "," + this.getMedia() + "," + this.nome + "," + this.peso + "," + this.nota);
+        Files.write(f.toPath(), lines, StandardCharsets.UTF_8);
         
     }
     

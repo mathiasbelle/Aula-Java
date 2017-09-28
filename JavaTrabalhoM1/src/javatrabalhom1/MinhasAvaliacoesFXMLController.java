@@ -61,24 +61,27 @@ public class MinhasAvaliacoesFXMLController extends InterfaceUsuario {
         
     }
 
+    public void retornar () {
+        initialize(null, null);
+    }
     /**
      * Initializes the controller class.
      */
     
     
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-               Avaliacao a1 = new Avaliacao();
-        
+
+        Avaliacao a1 = new Avaliacao();
         ArrayList<Avaliacao> lista = a1.obterListaAvaliacao();
         System.out.println("Disciplina pegar: "+lista.get(0).getDisciplina());
         ObservableList dados1 = FXCollections.observableArrayList(lista);
-        
-        
-        this.dados = dados1;
 
-        tabela.setItems(dados1);
+        //this.setDados(dados1);
+        
+        this.dados=dados1;
+        tabela.setItems(dados);
         
         colunaNome.setCellValueFactory(new PropertyValueFactory("nome"));
         colunaDisc.setCellValueFactory(new PropertyValueFactory("disciplina"));
@@ -102,6 +105,20 @@ public class MinhasAvaliacoesFXMLController extends InterfaceUsuario {
     
     public void VoltarDashboard(ActionEvent evento){
         GerenciadorJanela.obterInstancia().voltar();
+    }
+
+    /**
+     * @return the dados
+     */
+    public ObservableList getDados() {
+        return dados;
+    }
+
+    /**
+     * @param dados the dados to set
+     */
+    public void setDados(ObservableList dados) {
+        this.dados = dados;
     }
     
 
