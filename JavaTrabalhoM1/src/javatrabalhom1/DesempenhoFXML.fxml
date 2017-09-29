@@ -9,9 +9,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="155.0" layoutY="23.0" text="Meu desempenho em cada disciplina e em cada média" />
-      <Button layoutX="53.0" layoutY="330.0" mnemonicParsing="false" onAction="#VoltarDashboard" text="Voltar" />
-      <BarChart fx:id="grafico" layoutX="87.0" layoutY="40.0" prefHeight="289.0" prefWidth="427.0" title="Gráfico de Desempenho">
+      <Label layoutX="157.0" layoutY="6.0" text="Meu desempenho em cada disciplina e em cada média" />
+      <Button layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#VoltarDashboard" text="Voltar" />
+      <BarChart fx:id="grafico" layoutX="20.0" layoutY="20.0" prefHeight="341.0" prefWidth="565.0" title="Gráfico de Desempenho">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

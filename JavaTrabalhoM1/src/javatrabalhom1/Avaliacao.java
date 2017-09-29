@@ -154,7 +154,6 @@ public class Avaliacao {
         try {
             fr = new FileReader("teste.csv");
             br = new BufferedReader(fr);
-            
             while((stringTabela = br.readLine()) != null){
                 a1.add(stringTabela);
             }
@@ -169,9 +168,14 @@ public class Avaliacao {
                 avl.setMedia(cortar[1]);
                 avl.setNome(cortar[2]);
                 avl.setPeso(Double.parseDouble(cortar[3]));
-                avl.setNota(0.0);
-                
+                if(cortar.length>=5){
+                    System.out.println("Nota nkwefnjenjwef: "+Double.parseDouble(cortar[4]) );
+                    avl.setNota(Double.parseDouble(cortar[4]));
+                    System.out.println("Nota efbhwefybewufbwue: "+Double.parseDouble(cortar[4]) );
+                }else
+                    avl.setNota(0.0);
                 a2.add(avl);
+            
             }
             
             
