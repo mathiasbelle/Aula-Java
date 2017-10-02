@@ -7,11 +7,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="157.0" layoutY="6.0" text="Meu desempenho em cada disciplina e em cada média" />
-      <Button layoutX="14.0" layoutY="364.0" mnemonicParsing="false" onAction="#VoltarDashboard" text="Voltar" />
-      <BarChart fx:id="grafico" layoutX="20.0" layoutY="20.0" prefHeight="341.0" prefWidth="565.0" title="Gráfico de Desempenho">
+      <Button layoutX="47.0" layoutY="322.0" mnemonicParsing="false" onAction="#VoltarDashboard" text="Voltar" />
+      <BarChart fx:id="grafico" layoutX="47.0" layoutY="29.0" prefHeight="305.0" prefWidth="800.0" title="Gráfico de Desempenho">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

@@ -141,22 +141,36 @@ public class Avaliacao {
         
            //ObservableList<Avaliacao> listaAvl = null;
         Avaliacao aval = new Avaliacao();
+        ArrayList<String> a1 = new ArrayList<>();
+        ArrayList<Avaliacao> a2 = new ArrayList<>();
+        a2.clear();
         
-        
-        String stringTabela;
         BufferedReader br = null;
         FileReader fr = null;
         
-
-        ArrayList<String> a1 = new ArrayList<>();
-        ArrayList<Avaliacao> a2 = new ArrayList<>();
+        try{
+        String stringTabela="";
+        File arqv = new File("teste.csv");
+        if(!arqv.exists())
+            arqv.createNewFile();
+//        BufferedReader br = null;
+//        FileReader fr = null;
         
-        try {
-            fr = new FileReader("teste.csv");
-            br = new BufferedReader(fr);
+
+//        ArrayList<String> a1 = new ArrayList<>();
+//        ArrayList<Avaliacao> a2 = new ArrayList<>();
+        
+            System.out.println("tamanho : "+arqv.length());
+            //fr = new FileReader("teste.csv");
+            if(arqv.length()!=0){
+            
+            br = new BufferedReader(new FileReader(arqv));
             while((stringTabela = br.readLine()) != null){
                 a1.add(stringTabela);
             }
+            System.out.println("StringTabela: "+stringTabela);
+            
+                System.out.println("Entrou");
             Avaliacao avl;
             for (int i = 0; i < a1.size(); i++) {
                 
@@ -177,7 +191,8 @@ public class Avaliacao {
                 a2.add(avl);
             
             }
-            
+        }else
+                return a2;
             
 
         } catch (IOException e) {

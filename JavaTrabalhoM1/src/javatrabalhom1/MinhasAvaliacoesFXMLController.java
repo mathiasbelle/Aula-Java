@@ -55,7 +55,7 @@ public class MinhasAvaliacoesFXMLController extends InterfaceUsuario {
         Avaliacao a1 = new Avaliacao();
         
         ArrayList<Avaliacao> lista = a1.obterListaAvaliacao();
-        System.out.println("Disciplina pegar: "+lista.get(0).getDisciplina());
+        //System.out.println("Disciplina pegar: "+lista.get(0).getDisciplina());
         ObservableList dados = FXCollections.observableArrayList(lista);
         return dados;
         
@@ -75,7 +75,7 @@ public class MinhasAvaliacoesFXMLController extends InterfaceUsuario {
 
         Avaliacao a1 = new Avaliacao();
         ArrayList<Avaliacao> lista = a1.obterListaAvaliacao();
-        System.out.println("Disciplina pegar: "+lista.get(0).getDisciplina());
+        //System.out.println("Disciplina pegar: "+lista.get(0).getDisciplina());
         ObservableList dados1 = FXCollections.observableArrayList(lista);
 
         //this.setDados(dados1);

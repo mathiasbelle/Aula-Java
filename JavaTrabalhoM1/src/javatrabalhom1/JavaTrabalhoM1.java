@@ -24,6 +24,8 @@ public class JavaTrabalhoM1 extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Eu queria mt coisa");
+        primaryStage.setMinWidth(1024);
+        primaryStage.setMinHeight(768);
         DashboardFXMLController janelaPrincipal = new DashboardFXMLController();
         GerenciadorJanela.obterInstancia().inicializaPalco(primaryStage, janelaPrincipal);
     }
