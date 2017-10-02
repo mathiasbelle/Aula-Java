@@ -82,19 +82,19 @@ public class JavaCalculadora extends Application{
         hboxResultado.setAlignment(Pos.CENTER);
 
         Label capitalLabel = new Label("Valor do Capital: ");
-        capitalLabel.setFont(Font.font("Times New Roman", 50));
+        capitalLabel.setFont(Font.font("Times New Roman", 35));
 
         Label montanteLabel = new Label("Valor do Montante: ");
-        montanteLabel.setFont(Font.font("Curlz MT", 50));
+        montanteLabel.setFont(Font.font("Curlz MT", 35));
 
         Label taxaLabel = new Label("Valor da Taxa: ");
-        taxaLabel.setFont(Font.font("Jokerman", 50));
+        taxaLabel.setFont(Font.font("Jokerman", 35));
 
         Label tempoLabel = new Label("Valor do Tempo: ");
-        tempoLabel.setFont(Font.font("Times New Roman", 50));
+        tempoLabel.setFont(Font.font("Times New Roman", 35));
 
         Label resultadoLabel = new Label("Resultado: ");
-        tempoLabel.setFont(Font.font("Arial", 50));
+        resultadoLabel.setFont(Font.font("Arial", 35));
 
 
 
@@ -103,39 +103,29 @@ public class JavaCalculadora extends Application{
 
 
         TextField capital = new TextField();
-        capital.setFont(Font.font("Arial", 25));
+        capital.setFont(Font.font("Arial", 15));
         TextField taxa = new TextField();
-        taxa.setFont(Font.font("Times New Roman", 25));
+        taxa.setFont(Font.font("Times New Roman", 15));
         TextField tempo = new TextField();
-        tempo.setFont(Font.font("Jokerman", 25));
+        tempo.setFont(Font.font("Jokerman", 15));
         TextField montante = new TextField();
-        montante.setFont(Font.font("Curlz MT", 25));
+        montante.setFont(Font.font("Curlz MT", 15));
         TextField juros = new TextField();
-        juros.setFont(Font.font("Times New Roman", 25));
+        juros.setFont(Font.font("Times New Roman", 15));
         TextField resultado = new TextField();
-
-
-
-        //Image fotoBotao = new Image(getClass().getResourceAsStream("wrong.png"));
-        //Button calcJuros = new Button("Calcular Juros", new ImageView(fotoBotao));
-        Button calcJuros = new Button("Calcular Juros");
-        calcJuros.setMinSize(150, 20);
-        calcJuros.setFont(Font.font("BankGothic Lt Bt", 80));
-
-
 
 
         /* BOTÃO DE IMAGENS ALEARÓTIAS
         */
-        Button imagemAleatoria = new Button("Clique para gerar uma\n imagem aleatória");
+        Button imagemAleatoria = new Button("Clique para gerar uma imagem aleatória");
         Tooltip tip = new Tooltip("Random Stuff");
         tip.setStyle("-fx-base: #AE3522; "
                         + "-fx-text-fill: orange; ");
-        tip.setFont(Font.font("Times New Roman", 30));
+        tip.setFont(Font.font("Times New Roman", 15));
 
         imagemAleatoria.setTooltip(tip);
         imagemAleatoria.setMinSize(150, 20);
-        imagemAleatoria.setFont(Font.font("Gigi", 80));
+        imagemAleatoria.setFont(Font.font("Gigi", 35));
 
         Random rand = new Random();
 
@@ -145,13 +135,9 @@ public class JavaCalculadora extends Application{
 
                 Stage aleatorio = new Stage();
                 VBox random = new VBox();
-                //Image imagem = new Image(getClass().getResourceAsStream((rand.nextInt(5)+1)+".jpg"));
 
-                //Label foto = new Label("", new ImageView(imagem));
-
-                ImageView imagem = new ImageView(new Image(getClass().getResourceAsStream((rand.nextInt(5)+1)+".jpg")));
+                ImageView imagem = new ImageView(new Image(getClass().getResourceAsStream((rand.nextInt(4)+1)+".jpg")));
                 random.getChildren().add(imagem);
-               //random.getChildren().add(scroll);
 
                 ScrollPane scroll = new ScrollPane(random);
                 scroll.setFitToHeight(true);
@@ -159,14 +145,7 @@ public class JavaCalculadora extends Application{
                 BorderPane border = new BorderPane(scroll);
                 border.setPadding(new Insets(15));
 
-                //scroll.setMin(0);
-                //scroll.setOrientation(Orientation.VERTICAL);
-
-//                random.getChildren().add(foto);
-//                random.getChildren().add(scroll);
-
-                //Scene cena2 = new Scene(random, 900, 700);
-                Scene cena2 = new Scene(border, 900, 700);
+                Scene cena2 = new Scene(border, 1024, 768);
                 aleatorio.setTitle("Imagem Aleatória");
                 aleatorio.setScene(cena2);
                 aleatorio.show();
@@ -177,18 +156,19 @@ public class JavaCalculadora extends Application{
         // FIM DO BOTÃO DE IMAGENS ALEATÓRIAS
 
 
-
+        Button calcJuros = new Button("Calcular Juros");
+        calcJuros.setMinSize(150, 20);
+        calcJuros.setFont(Font.font("BankGothic Lt Bt", 35));
+        
         // BOTÃO DE CALCULAR
         calcJuros.setOnAction(new EventHandler<ActionEvent>() {
-
 
             public void handle(ActionEvent t) {
                 try{
                 resultado.setText("" + (Double.parseDouble(capital.getText()) * Double.parseDouble(taxa.getText()) * Double.parseDouble(tempo.getText()) ));
                 
-                    try{
-                    
-                   
+                // Escrita no arquivo do histórico
+                    try{              
                     File arqv = new File("historico.txt");
                     
                     if(arqv.exists()!=true)
@@ -202,20 +182,16 @@ public class JavaCalculadora extends Application{
                     bw.write("Tempo = "+tempo.getText()+"\n");
                     bw.write("Montante = "+montante.getText()+"\n");
                     bw.write("Resultado = "+resultado.getText()+"\n");
-                    bw.write("=========================\n");
-                    
+                    bw.write("=========================\n");                   
                     bw.close();
 	  	}catch(Exception e){}
                 
                 
                 }catch(Exception e){
+                    // Caso o usuário insira uma letra como entrada
                     // USANDO BORDERPANE
                     Stage stageErro = new Stage();
-                    BorderPane mensagemErro = new BorderPane();
-                   
-                    
-                     
-                    
+                    BorderPane mensagemErro = new BorderPane();      
                     try{
                         
                         File arqv = new File("historico.txt");
@@ -240,18 +216,19 @@ public class JavaCalculadora extends Application{
                     colocaDouble.setFont(Font.font("ALGERIAN", 20));
                     colocaDouble.setStyle("-fx-text-fill: blue; ");
 
-
                     VBox terrorElizandro = new VBox();
                     Label endereco = new Label("\tMuda o endereço de memória vacilão!");
-                    //Image fotoErro = new Image(getClass().getResourceAsStream("ballottin.jpg"));
                     ImageView a = new ImageView(new Image(getClass().getResourceAsStream("ballottin.jpg")));
+                    
+                    
                     terrorElizandro.getChildren().addAll(endereco, a);
 
-                    //Image erroFoto = new Image(getClass().getResourceAsStream("wrong.png"));
                     ImageView fotoBotao = new ImageView(new Image(getClass().getResourceAsStream("wrong.png")));
+
                     Button mostrarFoto = new Button();
+                    mostrarFoto.setMaxSize(50, 50);
                     mostrarFoto.setGraphic(fotoBotao);
-                    
+                                  
                     Tooltip tipFechar = new Tooltip("Clique para fechar");
                     tipFechar.setFont(Font.font(20));
                     mostrarFoto.setTooltip(tipFechar);
@@ -263,58 +240,20 @@ public class JavaCalculadora extends Application{
                         }
                     });
                     
-
                     mensagemErro.setCenter(mostrarFoto);
                     mensagemErro.setRight(terrorElizandro);
                     mensagemErro.setTop(colocaDouble);
 
-
-
-                    Scene cenaErro = new Scene(mensagemErro, 800, 700);
+                    Scene cenaErro = new Scene(mensagemErro, 850, 700);
                     stageErro.setScene(cenaErro);
                     stageErro.setTitle("Erro!");
                     stageErro.show();
-
-
-
-
-
-
-
-                    // USANDO VBOX
-//                    Stage erro = new Stage();
-//                    VBox mensagemErro = new VBox();
-//                    Label colocaDouble = new Label("Erro!!\nNão é um número. Por favor, insira um número.\nAtenciosamente, o Programador");
-//                    colocaDouble.setFont(Font.font("ALGERIAN", 20));
-//                    Image imagem = new Image(getClass().getResourceAsStream("wrong.png"));
-//                    //Label fotinha = new Label("Erro", new ImageView(imagem));
-//                    Label fotinha = new Label("",new ImageView(imagem));
-//                    //fotinha.setGraphic(new ImageView(imagem));
-//
-//                    Button botaoSair = new Button("Sair");
-//                    botaoSair.setMinSize(200, 50);
-//
-//                    mensagemErro.getChildren().add(colocaDouble);
-//
-//                    mensagemErro.getChildren().add(fotinha);
-//                     mensagemErro.getChildren().add(botaoSair);
-//                    Scene erroCena = new Scene(mensagemErro, 600, 800);
-//                    erro.setScene(erroCena);
-//                    erro.setTitle("Erro!");
-//                    erro.show();
-//
-//                    botaoSair.setOnAction(new EventHandler<ActionEvent>() {
-//                        public void handle(ActionEvent t) {
-//                            erro.close();
-//                        }
-//                    });
                 }
 
             }
         });
 
         // FIM DO BOTÃO DE CALCULAR
-        
         
 
         Button historico = new Button("Histórico");
@@ -324,7 +263,7 @@ public class JavaCalculadora extends Application{
         historico.setTooltip(dicaHistorico);
 
         historico.setMinSize(50,60);
-        
+         // INÍCIO DO BOTÃO DE HISTÓRICO
         historico.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent t) {
@@ -347,8 +286,6 @@ public class JavaCalculadora extends Application{
                   while ( (lena= br.readLine()) != null) {
                       stringHistorico+="\n" +lena;
                       mostarHistorico.setText(mostarHistorico.getText()+"\n"+lena);
-                      
-                      System.out.println(stringHistorico);
                   }
 
                 }catch(IOException e){
@@ -368,15 +305,9 @@ public class JavaCalculadora extends Application{
                 boxHistorico.getChildren().add(mostarHistorico);
                 
                 ScrollPane scrollHistorico = new ScrollPane(boxHistorico);
-                
-                //scrollHistorico.setFitToHeight(true);
-                 scrollHistorico.setHbarPolicy(ScrollBarPolicy.NEVER);
-                 scrollHistorico.setVbarPolicy(ScrollBarPolicy.ALWAYS);
-                
-//                BorderPane border = new BorderPane(scrollHistorico);
-//                border.setPadding(new Insets(15));
-
-
+                             
+                scrollHistorico.setHbarPolicy(ScrollBarPolicy.NEVER);
+                scrollHistorico.setVbarPolicy(ScrollBarPolicy.ALWAYS);
 
                 Scene cenaHistorico =  new Scene(scrollHistorico, 250, 500);
                 stageHistorico.setScene(cenaHistorico);
@@ -385,6 +316,7 @@ public class JavaCalculadora extends Application{
                 
             }
         });
+        // FIM DO BOTÃO DE HISTÓRICO
 
 
         hboxCapital.getChildren().addAll(capitalLabel, capital);
@@ -393,28 +325,17 @@ public class JavaCalculadora extends Application{
         hboxTempo.getChildren().addAll(tempoLabel, tempo);
         hboxResultado.getChildren().addAll(resultadoLabel, resultado);
 
-
-
         janelaPrincipal.getChildren().addAll(hboxCapital, hboxMontante, hboxTaxa, hboxTempo, hboxResultado);
-//        janelaPrincipal.getChildren().add(taxa);
-//        janelaPrincipal.getChildren().add(tempo);
-//        janelaPrincipal.getChildren().add(montante);
-//        janelaPrincipal.getChildren().add(juros);
-//        janelaPrincipal.getChildren().add(resultado);
 
         janelaPrincipal.getChildren().add(calcJuros);
         janelaPrincipal.getChildren().add(imagemAleatoria);
         janelaPrincipal.getChildren().add(historico);
 
-        Scene cenaPrincipal = new Scene(janelaPrincipal, 1200, 900);
+        Scene cenaPrincipal = new Scene(janelaPrincipal, 800, 600);
         stage.setScene(cenaPrincipal);
         stage.setTitle("Calculadora de Econômica");
         stage.show();
 
-
-
     }
-
-
 
 }
