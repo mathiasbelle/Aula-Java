@@ -113,12 +113,6 @@ public class Avaliacao {
         this.identificadorArquivo = identificadorArquivo;
     }
     
-    public void salvar(){
-        
-        
-        
-    }
-    
     public void atualizar() throws IOException{         
         File f = new File("dados_usuario.csv");
         List<String> lines = Files.readAllLines(f.toPath());
