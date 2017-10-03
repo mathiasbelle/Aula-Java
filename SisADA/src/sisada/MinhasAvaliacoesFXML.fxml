@@ -5,18 +5,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="193.0" layoutY="33.0" mnemonicParsing="false" onAction="#irInformarNota" text="Informar Nota" />
-      <Button layoutX="300.0" layoutY="33.0" mnemonicParsing="false" onAction="#AdicionarAvaliacao" text="Adicionar nova Avaliação" />
-      <Button layoutX="55.0" layoutY="319.0" mnemonicParsing="false" onAction="#VoltarDashboard" text="Voltar" />
-      <TableView fx:id="tabela" layoutX="46.0" layoutY="82.0" prefHeight="200.0" prefWidth="532.0">
+      <Button layoutX="95.0" layoutY="33.0" mnemonicParsing="false" onAction="#irInformarNota" prefHeight="41.0" prefWidth="193.0" text="Informar Nota" />
+      <Button layoutX="300.0" layoutY="33.0" mnemonicParsing="false" onAction="#AdicionarAvaliacao" prefHeight="41.0" prefWidth="291.0" text="Adicionar nova Avaliação" />
+      <Button layoutX="28.0" layoutY="437.0" mnemonicParsing="false" onAction="#VoltarDashboard" prefHeight="55.0" prefWidth="167.0" text="Voltar" />
+      <TableView fx:id="tabela" layoutX="46.0" layoutY="82.0" prefHeight="337.0" prefWidth="747.0">
         <columns>
-          <TableColumn fx:id="colunaNome" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="colunaDisc" prefWidth="122.0" text="Disciplina" />
-            <TableColumn fx:id="colunaMedia" prefWidth="75.0" text="Media" />
-            <TableColumn fx:id="colunaPeso" prefWidth="122.0" text="Peso" />
-            <TableColumn fx:id="colunaNota" prefWidth="122.0" text="Minha Nota" />
+          <TableColumn fx:id="colunaNome" prefWidth="237.0" text="Nome" />
+          <TableColumn fx:id="colunaDisc" prefWidth="248.0" text="Disciplina" />
+            <TableColumn fx:id="colunaMedia" prefWidth="82.0" text="Media" />
+            <TableColumn fx:id="colunaPeso" text="Peso" />
+            <TableColumn fx:id="colunaNota" prefWidth="92.0" text="Minha Nota" />
         </columns>
       </TableView>
    </children>
